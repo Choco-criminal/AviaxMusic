@@ -100,7 +100,7 @@ SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/c7ea15528fc9816e05141-0a5598a
 # ------------------------------------------------------------------------
 # --------
 
-
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 
 def time_to_seconds(time):
     stringt = str(time)
