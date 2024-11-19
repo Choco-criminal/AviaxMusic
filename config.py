@@ -36,7 +36,9 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-
+#---------------------------------------------------------------
+MONGO_DB_URI = getenv("MONGO_DB_URI" , "mongodb+srv://1:1@cluster0.nofyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+#-
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Choco_for_u")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/ANIME_CHAT_ANG")
