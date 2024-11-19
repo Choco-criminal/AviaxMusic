@@ -59,41 +59,58 @@ def private_panel(_):
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-# Management panel buttons generator
-def management_panel_buttons(page_num):
-    panels = {
-        1: [  # This was previously page 3
-            [InlineKeyboardButton("A-spam", callback_data="a_spam"), InlineKeyboardButton("A-raid", callback_data="a_raid")],
-            [InlineKeyboardButton("A-flood", callback_data="a_flood"), InlineKeyboardButton("A-channel", callback_data="a_channel")],
-            [InlineKeyboardButton("Afk", callback_data="afk"), InlineKeyboardButton("Admin", callback_data="admin")],
-            [InlineKeyboardButton("Approval", callback_data="approval"), InlineKeyboardButton("B-list", callback_data="b_list")],
-            [InlineKeyboardButton("B-users", callback_data="b_users"), InlineKeyboardButton("Backup", callback_data="backup")],
-            [InlineKeyboardButton("Cinfo", callback_data="cinfo"), InlineKeyboardButton("Clean", callback_data="clean")],
-            [InlineKeyboardButton("Connect", callback_data="connect"), InlineKeyboardButton("Disable", callback_data="disable")],
-            [InlineKeyboardButton("Db-clean", callback_data="db_clean"), InlineKeyboardButton("Next ➡️", callback_data="management_page_2")],
-            [InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
-        ],
-        2: [  # This was previously page 1
-            [InlineKeyboardButton("F-sub", callback_data="f_sub"), InlineKeyboardButton("Filters", callback_data="filters")],
-            [InlineKeyboardButton("Feds", callback_data="feds"), InlineKeyboardButton("G-cast", callback_data="g_cast")],
-            [InlineKeyboardButton("Info", callback_data="info"), InlineKeyboardButton("Logs", callback_data="logs")],
-            [InlineKeyboardButton("Locks", callback_data="locks"), InlineKeyboardButton("Muting", callback_data="muting")],
-            [InlineKeyboardButton("N-mode", callback_data="n_mode"), InlineKeyboardButton("Notes", callback_data="notes")],
-            [InlineKeyboardButton("Owner", callback_data="owner"), InlineKeyboardButton("Pins", callback_data="pins")],
-            [InlineKeyboardButton("Ping", callback_data="ping"), InlineKeyboardButton("Purge", callback_data="purge")],
-            [InlineKeyboardButton("Quotly", callback_data="quotly"), InlineKeyboardButton("Next ➡️", callback_data="management_page_3")],
-            [InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
-        ],
-        3: [  # This was previously page 2
-            [InlineKeyboardButton("Sticker", callback_data="sticker"), InlineKeyboardButton("Translator", callback_data="translator")],
-            [InlineKeyboardButton("Truth-Dare", callback_data="truth_dare"), InlineKeyboardButton("Tag-All", callback_data="tag_all")],
-            [InlineKeyboardButton("Uall", callback_data="uall"), InlineKeyboardButton("Warns", callback_data="warns")],
-            [InlineKeyboardButton("Welcome", callback_data="welcome"), InlineKeyboardButton("Zombies", callback_data="zombies")],
-            [InlineKeyboardButton("⬅️ Previous", callback_data="management_page_2"), InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
-        ]
-    }
-    return InlineKeyboardMarkup(panels[page_num])
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
+def management_panel_buttons(page_num):
+    # Define the commands for all buttons in order
+    buttons = [
+        InlineKeyboardButton("A-spam", callback_data="a_spam"), InlineKeyboardButton("A-raid", callback_data="a_raid"),
+        InlineKeyboardButton("A-flood", callback_data="a_flood"), InlineKeyboardButton("A-channel", callback_data="a_channel"),
+        InlineKeyboardButton("Afk", callback_data="afk"), InlineKeyboardButton("Admin", callback_data="admin"),
+        InlineKeyboardButton("Approval", callback_data="approval"), InlineKeyboardButton("B-list", callback_data="b_list"),
+        InlineKeyboardButton("B-users", callback_data="b_users"), InlineKeyboardButton("Backup", callback_data="backup"),
+        InlineKeyboardButton("Cinfo", callback_data="cinfo"), InlineKeyboardButton("Clean", callback_data="clean"),
+        InlineKeyboardButton("Connect", callback_data="connect"), InlineKeyboardButton("Disable", callback_data="disable"),
+        InlineKeyboardButton("Db-clean", callback_data="db_clean"), InlineKeyboardButton("F-sub", callback_data="f_sub"),
+        InlineKeyboardButton("Filters", callback_data="filters"), InlineKeyboardButton("Feds", callback_data="feds"),
+        InlineKeyboardButton("G-cast", callback_data="g_cast"), InlineKeyboardButton("Info", callback_data="info"),
+        InlineKeyboardButton("Logs", callback_data="logs"), InlineKeyboardButton("Locks", callback_data="locks"),
+        InlineKeyboardButton("Muting", callback_data="muting"), InlineKeyboardButton("N-mode", callback_data="n_mode"),
+        InlineKeyboardButton("Notes", callback_data="notes"), InlineKeyboardButton("Owner", callback_data="owner"),
+        InlineKeyboardButton("Pins", callback_data="pins"), InlineKeyboardButton("Ping", callback_data="ping"),
+        InlineKeyboardButton("Purge", callback_data="purge"), InlineKeyboardButton("Quotly", callback_data="quotly"),
+        InlineKeyboardButton("Sticker", callback_data="sticker"), InlineKeyboardButton("Translator", callback_data="translator"),
+        InlineKeyboardButton("Truth-Dare", callback_data="truth_dare"), InlineKeyboardButton("Tag-All", callback_data="tag_all"),
+        InlineKeyboardButton("Uall", callback_data="uall"), InlineKeyboardButton("Warns", callback_data="warns"),
+        InlineKeyboardButton("Welcome", callback_data="welcome"), InlineKeyboardButton("Zombies", callback_data="zombies")
+    ]
+    
+    # Number of buttons per page (3 buttons per row, 5 rows per page -> 15 buttons per page)
+    buttons_per_page = 15
+    total_pages = (len(buttons) + buttons_per_page - 1) // buttons_per_page  # Calculate total number of pages
+
+    # Get the buttons for the current page
+    start_index = (page_num - 1) * buttons_per_page
+    end_index = start_index + buttons_per_page
+    page_buttons = buttons[start_index:end_index]
+
+    # Split the buttons into rows of 3
+    keyboard = [page_buttons[i:i+3] for i in range(0, len(page_buttons), 3)]
+
+    # Add navigation buttons (Previous, Next, Close)
+    nav_buttons = []
+    if page_num > 1:
+        nav_buttons.append(InlineKeyboardButton("⬅️ Previous", callback_data=f"management_page_{page_num - 1}"))
+    if page_num < total_pages:
+        nav_buttons.append(InlineKeyboardButton("Next ➡️", callback_data=f"management_page_{page_num + 1}"))
+    nav_buttons.append(InlineKeyboardButton("Close ❌", callback_data="settingsback_helper"))
+    
+    # Add navigation buttons as the last row
+    keyboard.append(nav_buttons)
+
+    return InlineKeyboardMarkup(keyboard)
+
+# Example usage: management_panel_buttons(1)
 
 # Callback query handler for management panel
 @app.on_callback_query(filters.regex(r"management_page_\d+"))
