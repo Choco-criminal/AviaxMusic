@@ -56,56 +56,72 @@ def private_panel(_):
 
 # Management panel buttons for a given page
 # Management panel buttons for a given page
-def management_panel_page(page_num):
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+
+# Management panel buttons generator
+def management_panel_buttons(page_num):
     panels = {
         1: [
-            ["F-sub", "f_sub", "Filters", "filters", "Feds", "feds"],
-            ["G-cast", "g_cast", "Info", "info", "Logs", "logs"],
-            ["Locks", "locks", "Muting", "muting", "N-mode", "n_mode"],
-            ["Notes", "notes", "Owner", "owner", "Pins", "pins"],
-            ["Ping", "ping", "Purge", "purge", "Quotly", "quotly"],
-            ["Next ➡️", "management_page_2", "⬅️ Go Back", "settingsback_helper"]
+            [InlineKeyboardButton("F-sub", callback_data="f_sub"), InlineKeyboardButton("Filters", callback_data="filters")],
+            [InlineKeyboardButton("Feds", callback_data="feds"), InlineKeyboardButton("G-cast", callback_data="g_cast")],
+            [InlineKeyboardButton("Info", callback_data="info"), InlineKeyboardButton("Logs", callback_data="logs")],
+            [InlineKeyboardButton("Locks", callback_data="locks"), InlineKeyboardButton("Muting", callback_data="muting")],
+            [InlineKeyboardButton("N-mode", callback_data="n_mode"), InlineKeyboardButton("Notes", callback_data="notes")],
+            [InlineKeyboardButton("Owner", callback_data="owner"), InlineKeyboardButton("Pins", callback_data="pins")],
+            [InlineKeyboardButton("Ping", callback_data="ping"), InlineKeyboardButton("Purge", callback_data="purge")],
+            [InlineKeyboardButton("Quotly", callback_data="quotly"), InlineKeyboardButton("Next ➡️", callback_data="management_page_2")],
+            [InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
         ],
         2: [
-            ["Sticker", "sticker", "Translator", "translator", "Truth-Dare", "truth_dare"],
-            ["Tag-All", "tag_all", "Uall", "uall", "Warns", "warns"],
-            ["Welcome", "welcome", "Zombies", "zombies"],
-            ["⬅️ Previous", "management_page_1", "Next ➡️", "management_page_3"],
-            ["⬅️ Go Back", "settingsback_helper"]
+            [InlineKeyboardButton("Sticker", callback_data="sticker"), InlineKeyboardButton("Translator", callback_data="translator")],
+            [InlineKeyboardButton("Truth-Dare", callback_data="truth_dare"), InlineKeyboardButton("Tag-All", callback_data="tag_all")],
+            [InlineKeyboardButton("Uall", callback_data="uall"), InlineKeyboardButton("Warns", callback_data="warns")],
+            [InlineKeyboardButton("Welcome", callback_data="welcome"), InlineKeyboardButton("Zombies", callback_data="zombies")],
+            [InlineKeyboardButton("⬅️ Previous", callback_data="management_page_1"), InlineKeyboardButton("Next ➡️", callback_data="management_page_3")],
+            [InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
         ],
         3: [
-            ["A-spam", "a_spam", "A-raid", "a_raid", "A-flood", "a_flood"],
-            ["A-channel", "a_channel", "Afk", "afk", "Admin", "admin"],
-            ["Approval", "approval", "B-list", "b_list", "B-users", "b_users"],
-            ["Backup", "backup", "Cinfo", "cinfo", "Clean", "clean"],
-            ["Connect", "connect", "Disable", "disable", "Db-clean", "db_clean"],
-            ["⬅️ Previous", "management_page_2", "⬅️ Go Back", "settingsback_helper"]
+            [InlineKeyboardButton("A-spam", callback_data="a_spam"), InlineKeyboardButton("A-raid", callback_data="a_raid")],
+            [InlineKeyboardButton("A-flood", callback_data="a_flood"), InlineKeyboardButton("A-channel", callback_data="a_channel")],
+            [InlineKeyboardButton("Afk", callback_data="afk"), InlineKeyboardButton("Admin", callback_data="admin")],
+            [InlineKeyboardButton("Approval", callback_data="approval"), InlineKeyboardButton("B-list", callback_data="b_list")],
+            [InlineKeyboardButton("B-users", callback_data="b_users"), InlineKeyboardButton("Backup", callback_data="backup")],
+            [InlineKeyboardButton("Cinfo", callback_data="cinfo"), InlineKeyboardButton("Clean", callback_data="clean")],
+            [InlineKeyboardButton("Connect", callback_data="connect"), InlineKeyboardButton("Disable", callback_data="disable")],
+            [InlineKeyboardButton("Db-clean", callback_data="db_clean"), InlineKeyboardButton("⬅️ Previous", callback_data="management_page_2")],
+            [InlineKeyboardButton("Close ❌", callback_data="settingsback_helper")]
         ]
     }
-    return InlineKeyboardMarkup([[InlineKeyboardButton(text, callback_data=cb_data) for text, cb_data in zip(row[::2], row[1::2])] for row in panels[page_num]])
+    return InlineKeyboardMarkup(panels[page_num])
 
 
+# Callback query handler for management panel
+@app.on_callback_query(filters.regex(r"management_page_\d+"))
+async def handle_management_panel(client: Client, callback_query: CallbackQuery):
+    page_num = int(callback_query.data.split("_")[-1])
+    await callback_query.message.edit_text(
+        f"Management Panel - Page {page_num}",
+        reply_markup=management_panel_buttons(page_num)
+    )
 
 
-# Callback query handler
-@app.on_callback_query()
-def handle_callback_query(client, query):
-    data = query.data
-    if data == "management_action":
-        query.message.edit_text("Management Panel - Page 1", reply_markup=management_panel_page(1))
-    elif data.startswith("management_page_"):
-        page_num = int(data.split('_')[-1])
-        query.message.edit_text(f"Management Panel - Page {page_num}", reply_markup=management_panel_page(page_num))
-    elif data == "settingsback_helper":
-        # Handle the "Go Back" button to return to the start panel
-        query.message.edit_text("Start Page", reply_markup=start_panel(_))
-    else:
-        # Directly return back button
-        for page_num, actions in {
-            1: ["f_sub", "filters", "feds", "g_cast", "info", "logs", "locks", "muting", "n_mode", "notes", "owner", "pins", "ping", "purge", "quotly"],
-            2: ["sticker", "translator", "truth_dare", "tag_all", "uall", "warns", "welcome", "zombies"],
-            3: ["a_spam", "a_raid", "a_flood", "a_channel", "afk", "admin", "approval", "b_list", "b_users", "backup", "cinfo", "clean", "connect", "disable", "db_clean"]
-        }.items():
-            if data in actions:
-                query.message.edit_text(f"{data.replace('_', '-')} action selected!", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⬅️ Back", callback_data=f"management_page_{page_num}")]]))
-                break
+# Callback query handler for management actions
+@app.on_callback_query(filters.regex(r"^f_sub|filters|feds|g_cast|info|logs|locks|muting|n_mode|notes|owner|pins|ping|purge|quotly|sticker|translator|truth_dare|tag_all|uall|warns|welcome|zombies|a_spam|a_raid|a_flood|a_channel|afk|admin|approval|b_list|b_users|backup|cinfo|clean|connect|disable|db_clean$"))
+async def handle_action(client: Client, callback_query: CallbackQuery):
+    action = callback_query.data
+    await callback_query.message.edit_text(
+        f"**{action.replace('_', ' ').capitalize()}** action selected!",
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("⬅️ Back", callback_data=f"management_page_1")]
+        ])
+    )
+
+
+# Callback query handler for close/back button
+@app.on_callback_query(filters.regex("settingsback_helper"))
+async def handle_close(client: Client, callback_query: CallbackQuery):
+    await callback_query.message.edit_text(
+        "Back to settings.",
+        reply_markup=start_panel(_)
+    )
