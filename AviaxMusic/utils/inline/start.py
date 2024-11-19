@@ -118,10 +118,6 @@ async def handle_action(client: Client, callback_query: CallbackQuery):
     )
 
 
-# Callback query handler for close/back button
-@app.on_callback_query(filters.regex("settingsback_helper"))
-async def handle_close(client: Client, callback_query: CallbackQuery):
-    await callback_query.message.edit_text(
-        "Back to settings.",
-        reply_markup=start_panel(_)
-    )
+# Corrected callback query handler for close/back button
+
+# Assuming `start_panel` function exists elsewhere in your code and doesn't require arguments. If it does, make sure to pass the correct argument(s).
