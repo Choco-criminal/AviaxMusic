@@ -1,14 +1,18 @@
+import asyncio
 import time
-
+import random
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaVideo
 import config
 from AviaxMusic import app
 from AviaxMusic.misc import _boot_
 from AviaxMusic.plugins.sudo.sudoers import sudoers_list
+from AviaxMusic.utils.database import get_served_chats, get_served_users, get_sudoers
+from AviaxMusic.utils import bot_sys_stats
 from AviaxMusic.utils.database import (
     add_served_chat,
     add_served_user,
@@ -17,33 +21,54 @@ from AviaxMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from AviaxMusic.utils import bot_sys_stats
 from AviaxMusic.utils.decorators.language import LanguageStart
 from AviaxMusic.utils.formatters import get_readable_time
 from AviaxMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
+#--------------------------
+
+NEXI_VID = [
+"https://envs.sh/pYY.mp4",
+"https://envs.sh/pC0.mp4",
+"https://envs.sh/pFS.mp4", 
+"https://envs.sh/pYG.mp4", 
+"https://envs.sh/_Z5.mp4", 
+"https://envs.sh/_ZG.mp4", 
+"https://envs.sh/_Z9.mp4", 
+
+]
+
+
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
+    
+    # Sending initial emoji
+    msg = await message.reply_sticker("CAACAgUAAxkDAAIEoWcm-PmfbFGDQWZ7u5kyCQUfqzFiAAIeCgACya4ZVWcoG8RVlky8NgQ")
+    await asyncio.sleep(2) 
+    # Repeat the cycle of emojis three times
+    
+    await msg.delete()
+    
+
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_video(
-                video=config.START_IMG_URL,
-                caption=_["help_1"].format(config.SUPPORT_GROUP),
-                protect_content=True,
+                random.choice(NEXI_VID),
+                caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
             if await is_on_off(2):
                 return await app.send_message(
-                    chat_id=config.LOG_GROUP_ID,
+                    chat_id=config.LOGGER_ID,
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
             return
@@ -68,7 +93,7 @@ async def start_pm(client, message: Message, _):
                 [
                     [
                         InlineKeyboardButton(text=_["S_B_8"], url=link),
-                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_GROUP),
+                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_CHAT),
                     ],
                 ]
             )
@@ -81,31 +106,30 @@ async def start_pm(client, message: Message, _):
             )
             if await is_on_off(2):
                 return await app.send_message(
-                    chat_id=config.LOG_GROUP_ID,
+                    chat_id=config.LOGGER_ID,
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
         out = private_panel(_)
-        UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_video(
-            video=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM),
+            random.choice(NEXI_VID),
+            caption="(⁠θ⁠‿⁠θ⁠) {0} \n\n● 𝙼𝚎𝚎𝚝 𝐅𝐮𝐛𝐮𝐤𝐢 ʏᴏᴜʀ ᴀʟʟ ɪɴ ᴏɴᴇ ʙᴏᴛ, ʀᴇᴀᴅʏ ᴛᴏ ᴛᴜʀɴ ᴜᴘ ᴛʜᴇ ʜᴇᴀᴛ.\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n◇ sʜᴇ ᴋɴᴏᴡs ᴇxᴀᴄᴛʟʏ ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ—sᴛʀᴇᴀᴍɪɴɢ 𝐦𝐮𝐬𝐢𝐜 ғʀᴏᴍ ᴀʟʟ ʏᴏᴜʀ ғᴀᴠᴏʀɪᴛᴇs, 𝐦𝐚𝐧𝐚𝐠𝐢ɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴡɪᴛʜ ᴀ sᴜʟᴛʀʏ ғɪɴᴇssᴇ.\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n◇ 𝐒𝐦𝐨𝐨𝐭𝐡, 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥, 𝐞𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭, 𝐅𝐮𝐛𝐮𝐤𝐢 ᴡɪʟʟ ᴛᴀᴋᴇ ᴄᴏɴᴛʀᴏʟ ᴡʜɪʟᴇ ʏᴏᴜ sɪᴛ ʙᴀᴄᴋ, ʀᴇʟᴀx, ᴀɴᴅ ʟᴇᴛ ʜᴇʀ ᴡᴏʀᴋ ʜᴇʀ ᴍᴀɢɪᴄ.\n━━━━━━━━━━━━━━━━━━━━━━━━━".format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
             return await app.send_message(
-                chat_id=config.LOG_GROUP_ID,
+                chat_id=config.LOGGER_ID,
                 text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
             )
 
 
-@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["start","fubuki"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
     await message.reply_video(
-        video=config.START_IMG_URL,
+        random.choice(NEXI_VID),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -132,7 +156,7 @@ async def welcome(client, message: Message):
                         _["start_5"].format(
                             app.mention,
                             f"https://t.me/{app.username}?start=sudolist",
-                            config.SUPPORT_GROUP,
+                            config.SUPPORT_CHAT,
                         ),
                         disable_web_page_preview=True,
                     )
@@ -140,9 +164,9 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_video(
-                    video=config.START_IMG_URL,
+                    random.choice(NEXI_VID),
                     caption=_["start_3"].format(
-                        message.from_user.first_name,
+                        message.from_user.mention,
                         app.mention,
                         message.chat.title,
                         app.mention,
