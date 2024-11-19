@@ -87,7 +87,7 @@ def management_panel_page(page_num):
 
 
 
-@# Callback query handler
+# Callback query handler
 @app.on_callback_query()
 def handle_callback_query(client, query):
     data = query.data
