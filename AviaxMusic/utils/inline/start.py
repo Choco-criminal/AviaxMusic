@@ -18,19 +18,18 @@ from AviaxMusic import app
 
 def start_panel(_):
     buttons = [
-          [
+          
         
         [
             InlineKeyboardButton(
                 text="ᴍᴜsɪᴄ", callback_data="settings_back_helper"
             ),
             InlineKeyboardButton(text="Management", callback_data="management_action"),
-        ]
+        ], 
+              
             [
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
-            ]
-              # New "Management" button
-        ],
+            ], 
     ]
     return buttons
 
