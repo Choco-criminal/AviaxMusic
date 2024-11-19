@@ -61,7 +61,7 @@ async def start_pm(client, message: Message, _):
             keyboard = help_pannel(_)
             return await message.reply_video(
                 random.choice(NEXI_VID),
-                caption=_["help_1"].format(config.SUPPORT_CHAT),
+                caption=_["help_1"].format(config.SUPPORT_GROUP),
                 reply_markup=keyboard,
             )
         if name[0:3] == "sud":
@@ -93,7 +93,7 @@ async def start_pm(client, message: Message, _):
                 [
                     [
                         InlineKeyboardButton(text=_["S_B_8"], url=link),
-                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_CHAT),
+                        InlineKeyboardButton(text=_["S_B_9"], url=config.SUPPORT_GROUP),
                     ],
                 ]
             )
@@ -156,7 +156,7 @@ async def welcome(client, message: Message):
                         _["start_5"].format(
                             app.mention,
                             f"https://t.me/{app.username}?start=sudolist",
-                            config.SUPPORT_CHAT,
+                            config.SUPPORT_GROUP,
                         ),
                         disable_web_page_preview=True,
                     )
