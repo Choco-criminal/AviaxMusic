@@ -30,6 +30,11 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
+#---------------------------------------------------------------
+MONGO_DB_URI = getenv("MONGO_DB_URI" , "mongodb+srv://1:1@cluster0.nofyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+#-
+
+
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/CyberPixelPro/AviaxMusic",
