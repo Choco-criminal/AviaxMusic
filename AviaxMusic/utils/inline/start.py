@@ -59,7 +59,7 @@ def private_panel(_):
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
 
 def management_panel_buttons(page_num):
     # Define the commands for all buttons in order
