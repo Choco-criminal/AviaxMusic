@@ -8,7 +8,7 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text= ᴍᴜsɪᴄ , callback_data="settings_back_helper"
+                text= "ᴍᴜsɪᴄ" , callback_data="settings_back_helper"
             ),
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
         ],
