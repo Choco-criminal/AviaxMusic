@@ -140,61 +140,67 @@ def management_panel_page_3(_):
             InlineKeyboardButton(text="B-list", callback_data="b_list"),
             InlineKeyboardButton(text="B-users", callback_data="b_users"),
         ],
-        [
-            InlineKeyboardButton(text="Backup", callback_data="backup"),
-            InlineKeyboardButton(text="Cinfo", callback_data="cinfo"),
-            InlineKeyboardButton(text="Clean", callback_data="clean"),
-        ],
-        [
-            InlineKeyboardButton(text="Connect", callback_data="connect"),
-            InlineKeyboardButton(text="Disable", callback_data="disable"),
-            InlineKeyboardButton(text="Db-clean", callback_data="db_clean"),
-        ],
-        [
-            InlineKeyboardButton(text="⬅️ Previous", callback_data="management_page_2"),
-        ],
-        [
-            InlineKeyboardButton(text="⬅️ Go Back", callback_data="go_home"),
-        ],
-    ]
-    return InlineKeyboardMarkup(buttons)
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from AviaxMusic import app
+import config
 
+# Start panel buttons
+def start_panel():
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("ᴍᴜsɪᴄ", callback_data="settings_back_helper"),
+            InlineKeyboardButton("Support Group", url=config.SUPPORT_GROUP),
+            InlineKeyboardButton("Management", callback_data="management_action")
+        ]
+    ])
 
-def get_back_button(callback_data):
-    """
-    Helper function to return to the correct management page after viewing an action.
-    """
-    if callback_data in ["f_sub", "filters", "feds", "g_cast", "info", "logs", "locks", "muting", "n_mode", "notes", "owner", "pins", "ping", "purge", "quotly"]:
-        return InlineKeyboardButton(text="⬅️ Back", callback_data="management_page_1")
-    elif callback_data in ["sticker", "translator", "truth_dare", "tag_all", "uall", "warns", "welcome", "zombies"]:
-        return InlineKeyboardButton(text="⬅️ Back", callback_data="management_page_2")
-    elif callback_data in ["a_spam", "a_raid", "a_flood", "a_channel", "afk", "admin", "approval", "b_list", "b_users", "backup", "cinfo", "clean", "connect", "disable", "db_clean"]:
-        return InlineKeyboardButton(text="⬅️ Back", callback_data="management_page_3")
+# Management panel buttons for a given page
+def management_panel_page(page_num):
+    panels = {
+        1: [
+            ["F-sub", "f_sub", "Filters", "filters", "Feds", "feds"],
+            ["G-cast", "g_cast", "Info", "info", "Logs", "logs"],
+            ["Locks", "locks", "Muting", "muting", "N-mode", "n_mode"],
+            ["Notes", "notes", "Owner", "owner", "Pins", "pins"],
+            ["Ping", "ping", "Purge", "purge", "Quotly", "quotly"],
+            ["Next ➡️", "management_page_2", "⬅️ Go Back", "go_home"]
+        ],
+        2: [
+            ["Sticker", "sticker", "Translator", "translator", "Truth-Dare", "truth_dare"],
+            ["Tag-All", "tag_all", "Uall", "uall", "Warns", "warns"],
+            ["Welcome", "welcome", "Zombies", "zombies"],
+            ["⬅️ Previous", "management_page_1", "Next ➡️", "management_page_3"],
+            ["⬅️ Go Back", "go_home"]
+        ],
+        3: [
+            ["A-spam", "a_spam", "A-raid", "a_raid", "A-flood", "a_flood"],
+            ["A-channel", "a_channel", "Afk", "afk", "Admin", "admin"],
+            ["Approval", "approval", "B-list", "b_list", "B-users", "b_users"],
+            ["Backup", "backup", "Cinfo", "cinfo", "Clean", "clean"],
+            ["Connect", "connect", "Disable", "disable", "Db-clean", "db_clean"],
+            ["⬅️ Previous", "management_page_2", "⬅️ Go Back", "go_home"]
+        ]
+    }
+    return InlineKeyboardMarkup([[InlineKeyboardButton(text, callback_data=cb_data) for text, cb_data in zip(row[::2], row[1::2])] for row in panels[page_num]])
 
-
-# Logic to handle callback queries in your bot
+# Callback query handler
 @app.on_callback_query()
 def handle_callback_query(client, query):
     data = query.data
-
     if data == "management_action":
-        query.message.edit_text("Management Panel - Page 1", reply_markup=management_panel_page_1(_))
-    
-    elif data == "management_page_1":
-        query.message.edit_text("Management Panel - Page 1", reply_markup=management_panel_page_1(_))
-    
-    elif data == "management_page_2":
-        query.message.edit_text("Management Panel - Page 2", reply_markup=management_panel_page_2(_))
-    
-    elif data == "management_page_3":
-        query.message.edit_text("Management Panel - Page 3", reply_markup=management_panel_page_3(_))
-    
+        query.message.edit_text("Management Panel - Page 1", reply_markup=management_panel_page(1))
+    elif data.startswith("management_page_"):
+        page_num = int(data.split('_')[-1])
+        query.message.edit_text(f"Management Panel - Page {page_num}", reply_markup=management_panel_page(page_num))
     elif data == "go_home":
-        query.message.edit_text("Start Page", reply_markup=start_panel(_))
-
-    # Handle specific button actions and add the back button to the respective page.
-    elif data in ["f_sub", "filters", "feds", "g_cast", "info", "logs", "locks", "muting", "n_mode", "notes", "owner", "pins", "ping", "purge", "quotly", "sticker", "translator", "truth_dare", "tag_all", "uall", "warns", "welcome", "zombies", "a_spam", "a_raid", "a_flood", "a_channel", "afk", "admin", "approval", "b_list", "b_users", "backup", "cinfo", "clean", "connect", "disable", "db_clean"]:
-        back_button = get_back_button(data)
-        query.message.edit_text(f"{data.replace('_', '-')} action selected!", reply_markup=InlineKeyboardMarkup([[back_button]]))
-
-    # Handle more actions if needed
+        query.message.edit_text("Start Page", reply_markup=start_panel())
+    else:
+        # Directly return back button
+        for page_num, actions in {
+            1: ["f_sub", "filters", "feds", "g_cast", "info", "logs", "locks", "muting", "n_mode", "notes", "owner", "pins", "ping", "purge", "quotly"],
+            2: ["sticker", "translator", "truth_dare", "tag_all", "uall", "warns", "welcome", "zombies"],
+            3: ["a_spam", "a_raid", "a_flood", "a_channel", "afk", "admin", "approval", "b_list", "b_users", "backup", "cinfo", "clean", "connect", "disable", "db_clean"]
+        }.items():
+            if data in actions:
+                query.message.edit_text(f"{data.replace('_', '-')} action selected!", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⬅️ Back", callback_data=f"management_page_{page_num}")]]))
+                break
