@@ -55,6 +55,7 @@ def private_panel(_):
     return buttons
 
 # Management panel buttons for a given page
+# Management panel buttons for a given page
 def management_panel_page(page_num):
     panels = {
         1: [
@@ -63,14 +64,14 @@ def management_panel_page(page_num):
             ["Locks", "locks", "Muting", "muting", "N-mode", "n_mode"],
             ["Notes", "notes", "Owner", "owner", "Pins", "pins"],
             ["Ping", "ping", "Purge", "purge", "Quotly", "quotly"],
-            ["Next ➡️", "management_page_2", "⬅️ Go Back", "go_home"]
+            ["Next ➡️", "management_page_2", "⬅️ Go Back", "settings_back_helper"]
         ],
         2: [
             ["Sticker", "sticker", "Translator", "translator", "Truth-Dare", "truth_dare"],
             ["Tag-All", "tag_all", "Uall", "uall", "Warns", "warns"],
             ["Welcome", "welcome", "Zombies", "zombies"],
             ["⬅️ Previous", "management_page_1", "Next ➡️", "management_page_3"],
-            ["⬅️ Go Back", "go_home"]
+            ["⬅️ Go Back", "settings_back_helper"]
         ],
         3: [
             ["A-spam", "a_spam", "A-raid", "a_raid", "A-flood", "a_flood"],
@@ -78,12 +79,15 @@ def management_panel_page(page_num):
             ["Approval", "approval", "B-list", "b_list", "B-users", "b_users"],
             ["Backup", "backup", "Cinfo", "cinfo", "Clean", "clean"],
             ["Connect", "connect", "Disable", "disable", "Db-clean", "db_clean"],
-            ["⬅️ Previous", "management_page_2", "⬅️ Go Back", "go_home"]
+            ["⬅️ Previous", "management_page_2", "⬅️ Go Back", "settings_back_helper"]
         ]
     }
     return InlineKeyboardMarkup([[InlineKeyboardButton(text, callback_data=cb_data) for text, cb_data in zip(row[::2], row[1::2])] for row in panels[page_num]])
 
-# Callback query handler
+
+
+
+@# Callback query handler
 @app.on_callback_query()
 def handle_callback_query(client, query):
     data = query.data
@@ -92,8 +96,9 @@ def handle_callback_query(client, query):
     elif data.startswith("management_page_"):
         page_num = int(data.split('_')[-1])
         query.message.edit_text(f"Management Panel - Page {page_num}", reply_markup=management_panel_page(page_num))
-    elif data == "go_home":
-        query.message.edit_text("Start Page", reply_markup=start_panel())
+    elif data == "settings_back_helper":
+        # Handle the "Go Back" button to return to the start panel
+        query.message.edit_text("Start Page", reply_markup=start_panel(_))
     else:
         # Directly return back button
         for page_num, actions in {
