@@ -1,6 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+
 # Callback query handler for Antispam help
+
 @app.on_callback_query(filters.regex("ANTISPAM_HELP"))
 async def antispam_help(client: Client, callback_query: CallbackQuery):
     antispam_message = ""
