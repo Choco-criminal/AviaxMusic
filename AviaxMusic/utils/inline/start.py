@@ -120,8 +120,8 @@ async def handle_management_panel(client: Client, callback_query: CallbackQuery)
         f"Management Panel - Page {page_num}",
         reply_markup=management_panel_buttons(page_num)
     )
-
-
+    
+"""
 # Callback query handler for management actions
 @app.on_callback_query(filters.regex(r"^f_sub|filters|feds|g_cast|info|logs|locks|muting|n_mode|notes|owner|pins|ping|purge|quotly|sticker|translator|truth_dare|tag_all|uall|warns|welcome|zombies|a_spam|a_raid|a_flood|a_channel|afk|admin|approval|b_list|b_users|backup|cinfo|clean|connect|disable|db_clean$"))
 async def handle_action(client: Client, callback_query: CallbackQuery):
@@ -132,6 +132,8 @@ async def handle_action(client: Client, callback_query: CallbackQuery):
             [InlineKeyboardButton("⬅️ Back", callback_data=f"management_page_1")]
         ])
     )
+
+    """
 
 
 # Callback query handler for close/back button
