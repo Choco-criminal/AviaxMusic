@@ -161,26 +161,28 @@ HELP_16 = """
 
 # ʟᴀɴɢᴜᴀɢᴇ ɴᴀᴍᴇ ɪɴ ᴛʜᴇ*
 # ʟᴀɴɢᴜᴀɢᴇ ɴᴀᴍᴇ ɪɴ ᴛʜᴇɪʀ ɴᴀᴛɪᴠᴇ
-language: """ 𝐄ɴɢʟɪsʜ """
+language = """ 𝐄ɴɢʟɪsʜ """
 
 
 # ɴᴀᴍᴇ ᴏғ ᴘᴇᴏᴘʟᴇ(s) ᴡʜᴏ ᴡᴏʀᴋᴇᴅ ᴏɴ ᴛʜɪs ᴛʀᴀɴsʟᴀᴛɪᴏɴ
-authors: """ @UnknownX_9_11 """
+authors = """ @UnknownX_9_11 """
 
 # ʟᴀɴɢᴜᴀɢᴇs
-curr_chat_lang: """ ʜᴇʏ. ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴀɴɢᴜᴀɢᴇ ɪs {}, sᴇʟᴇᴄᴛ ᴛʜᴇ ᴏɴᴇ ʏᴏᴜ ᴡᴀɴᴛ ғʀᴏᴍ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ :) """
-set_chat_lang: """ ɢʀᴇᴀᴛ, {} ɪᴛ ɪs ( ғʀᴏᴍ ɴᴏᴡ ᴏɴ! """
+curr_chat_lang = """ ʜᴇʏ. ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴀɴɢᴜᴀɢᴇ ɪs {}, sᴇʟᴇᴄᴛ ᴛʜᴇ ᴏɴᴇ ʏᴏᴜ ᴡᴀɴᴛ ғʀᴏᴍ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ 
+
+"""
+set_chat_lang = """ ɢʀᴇᴀᴛ, {} ɪᴛ ɪs ғʀᴏᴍ ɴᴏᴡ ᴏɴ! """
 
 
 
 
 
 
-akboss_help: |
+akboss_help = 
   """ *ᴀɴᴛɪ sᴇʀᴠɪᴄᴇ ʜᴇʟᴘ ᴍᴇɴᴜ* """
 
 
-achannel_help: |
+achannel_help = 
  """ *ᴀɴᴛɪ ᴄʜᴀɴɴᴇʟ*
   ᴛɪʀᴇᴅ ᴏғ ᴛᴇʟᴇɢʀᴀᴍ's sᴛᴜᴘɪᴅɪᴛʏ? ᴡᴇʟʟ ʜᴇʀᴇ ʏᴏᴜ ɢᴏ
   *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:*
@@ -189,7 +191,7 @@ achannel_help: |
   •➥ /antichannelpin <on/off>: ᴍᴀᴋᴇs ᴇxᴏɴ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴜɴᴘɪɴ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ ᴘᴏsᴛs ғʀᴏᴍ ᴄʜᴀᴛʀᴏᴏᴍ
 """
 
-admin_help: |
+admin_help = 
 """
   •➥ /admins*:* ʟɪꜱᴛ ᴏғ ᴀᴅᴍɪɴꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
   *ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:* 
@@ -203,7 +205,7 @@ admin_help: |
 """
 
 
-afk_help: |
+afk_help = 
 """
   •➥ /afk - ᴛʜɪs ᴡɪʟʟ sᴇᴛ ʏᴏᴜ ᴏғғʟɪɴᴇ.
   •➥ /afk [ʀᴇᴀsᴏɴ] - ᴛʜɪs ᴡɪʟʟ sᴇᴛ ʏᴏᴜ ᴏғғʟɪɴᴇ ᴡɪᴛʜ ᴀ ʀᴇᴀsᴏɴ.
@@ -212,7 +214,7 @@ afk_help: |
  """
 
 
-antiflood_help: |
+antiflood_help =
 """
   •➥ *ᴀᴅᴍɪɴs ᴏɴʟʏ:*
   •➥ /antispam <on/off/yes/no>: ᴡɪʟʟ ᴛᴏɢɢʟᴇ ᴏᴜʀ ᴀɴᴛɪsᴘᴀᴍ ᴛᴇᴄʜ ᴏʀ ʀᴇᴛᴜʀɴ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs.
@@ -225,7 +227,7 @@ antiflood_help: |
  """
 
 
-approve_help: |
+approve_help = 
 """
   •➥ *ꜱᴏᴍᴇᴛɪᴍᴇꜱ, ʏᴏᴜ ᴍɪɢʜᴛ ᴛʀᴜꜱᴛ ᴀ ᴜꜱᴇʀ ɴᴏᴛ ᴛᴏ ꜱᴇɴᴅ ᴜɴᴡᴀɴᴛᴇᴅ ᴄᴏɴᴛᴇɴᴛ. ᴍᴀʏʙᴇ ɴᴏᴛ ᴇɴᴏᴜɢʜ ᴛᴏ ᴍᴀᴋᴇ ᴛʜᴇᴍ ᴀᴅᴍɪɴ, ʙᴜᴛ ʏᴏᴜ ᴍɪɢʜᴛ ʙᴇ ᴏᴋ ᴡɪᴛʜ ʟᴏᴄᴋꜱ ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ɴᴏᴛ ᴀᴘᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇᴍ*
       ᴛʜᴀᴛ ᴡʜᴀᴛ ᴀᴘᴘʀᴏᴠᴀʟꜱ ᴀʀᴇ ғᴏʀ - ᴀᴘᴘʀᴏᴠᴇ ᴏғ ᴛʀᴜꜱᴛᴡᴏʀᴛʜʏ . ᴜꜱᴇʀꜱ ᴛᴏ ᴀʟʟᴏᴡ ᴛʜᴇᴍ ᴛᴏ ꜱᴇɴᴅ
@@ -237,7 +239,7 @@ approve_help: |
   •➥ /unapproveall*:* ᴜɴᴀᴘᴘʀᴏᴠᴇ *ᴀʟʟ* ᴜꜱᴇʀꜱ ɪɴ a ᴄʜᴀᴛ. ᴛʜɪꜱ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜɴᴅᴏɴᴇ.
 """
 
-antispam_help: |
+antispam_help = 
 """
   •➥ *ᴀᴅᴍɪɴs ᴏɴʟʏ:*
   •➥ /antispam <on/off/yes/no>: ᴡɪʟʟ ᴛᴏɢɢʟᴇ ᴏᴜʀ ᴀɴᴛɪsᴘᴀᴍ ᴛᴇᴄʜ ᴏʀ ʀᴇᴛᴜʀɴ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ    sᴇᴛᴛɪɴɢs.
@@ -247,7 +249,7 @@ antispam_help: |
   ɴᴏᴛᴇ: ᴜsᴇʀs ᴄᴀɴ ᴀᴘᴘᴇᴀʟ ɢʙᴀɴs ᴏʀ ʀᴇᴘᴏʀᴛ sᴘᴀᴍᴍᴇʀs ᴀᴛ @AbishnoiMF
 """
 
-backup_help: |
+backup_help = 
 """
   *ᴀᴅᴍɪɴ ᴏɴʟʏ:*
   •➥ /import: ʀᴇᴘʟʏ ᴛᴏ ᴀ group ʙᴜᴛʟᴇʀ ʙᴀᴄᴋᴜᴘ ғɪʟᴇ ᴛᴏ ɪᴍᴘᴏʀᴛ ᴀs ᴍᴜᴄʜ ᴀs ᴘᴏssɪʙʟᴇ, ᴍᴀᴋɪɴɢ ᴛʜᴇ ᴛʀᴀɴsғᴇʀ sᴜᴘᴇʀ sɪᴍᴘʟᴇ! ɴᴏᴛᴇ \
@@ -256,7 +258,7 @@ backup_help: |
 """
 
 
-bans_help: |
+bans_help = 
 """
   •➥/kickme*:* ᴋɪᴄᴋꜱ ᴛʜᴇ ᴜꜱᴇʀ ᴡʜᴏ ɪꜱꜱᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ
    *ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:*
@@ -267,7 +269,7 @@ bans_help: |
   •➥ /kick <userhandle>*:* ᴋɪᴄᴋꜱ ᴀ ᴜꜱᴇʀ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ, (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)
 """
 
-buser_help: |
+buser_help = 
 """
   *ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs*
   •➥ /ignore: ʙʟᴀᴄᴋʟɪsᴛs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ ᴇɴᴛɪʀᴇʟʏ.
@@ -276,27 +278,27 @@ buser_help: |
   •➥ /notice: ʀᴇᴍᴏᴠᴇs ᴜsᴇʀ ғʀᴏᴍ ʙʟᴀᴄᴋʟɪsᴛ   
 """
 
-dbbackup_help: |
+dbbackup_help = 
 """
   *ᴏɴʟʏ ғᴏʀ ᴅᴇᴠs*
 
 """
 
 
-blacklist_help_bse: |
+blacklist_help_bse = 
 """
   *ʙʟᴀᴄᴋʟɪsᴛ ʜᴇʟᴘ ᴍᴇɴᴜ*
 """
 
 
-dbclean_help: |
+dbclean_help = 
 """
   *ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ*
   •➥ /dbcleanup: ʀᴇᴍᴏᴠᴇs ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄs ᴀɴᴅ ɢʀᴏᴜᴘs ғʀᴏᴍ ᴅʙ.
 """
 
 
-debug_help: |
+debug_help = 
 """
   *ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ*
   •➥ /debug <on/off>*:* ʟᴏɢs ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜᴘᴅᴀᴛᴇs.ᴛxᴛ.
@@ -304,7 +306,7 @@ debug_help: |
 """
 
 
-devs_help: |
+devs_help = 
 """
   *ᴏɴʟʏ ғᴏʀ ᴅᴇᴠs*
   •➥ /groups: ʟɪsᴛ ᴛʜᴇ ɢʀᴏᴜᴘs ᴡɪᴛʜ ɴᴀᴍᴇ, ID, ᴍᴇᴍʙᴇʀs ᴄᴏᴜɴᴛ ᴀs ᴀ ᴛxᴛ.
@@ -313,13 +315,13 @@ devs_help: |
   •➥ /ginfo ᴜsᴇʀɴᴀᴍᴇ/ʟɪɴᴋ/ɪᴅ: ᴘᴜʟʟs ɪɴғᴏ ᴘᴀɴᴇʟ ғᴏʀ ᴇɴᴛɪʀᴇ ɢʀᴏᴜᴘ.
 """
 
-owner_help: |
+owner_help =
 """
   *ᴏɴʟʏ ғᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀ*
   •➥ /
 """
 
-blacklist_help: |
+blacklist_help = 
 """
   •➥ʙʟᴀᴄᴋʟɪꜱᴛꜱ ᴀʀᴇ ᴜꜱᴇᴅ ᴛᴏ ꜱᴛᴏᴘ ᴄᴇʀᴛᴀɪɴ ᴛʀɪɢɢᴇʀꜱ ғʀᴏᴍ ʙᴇɪɴɢ ꜱᴀɪᴅ ɪɴ ᴀ ɢʀᴏᴜᴘ. ᴀɴʏ ᴛɪᴍᴇ ᴛʜᴇ ᴛʀɪɢɢᴇʀ ɪꜱ ᴍᴇɴᴛɪᴏɴᴇᴅ, ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ɪᴍᴍᴇᴅɪᴀᴛᴇʟʏ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ. ᴀ ɢᴏᴏᴅ ᴄᴏᴍʙᴏ ɪs sᴏᴍᴇᴛɪᴍᴇs ᴛᴏ ᴘᴀɪʀ ᴛʜɪs ᴜᴘ ᴡɪᴛʜ ᴡᴀʀɴ ғɪʟᴛᴇʀs!
   
@@ -333,7 +335,7 @@ blacklist_help: |
  """
 
 
-cinfo_help: |
+cinfo_help = 
 """
   •➥ /cinfo*:* ᴜsᴀɢᴇe:**cinfo ᴄʜᴀᴛ ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ
   •➥ /uinfo*:* ɢᴇᴛ ᴜsᴇʀ ᴛɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ
@@ -341,7 +343,7 @@ cinfo_help: |
 """
 
 
-cleaner_help: |
+cleaner_help = 
 """
   •➥ ʙʟᴜᴇ ᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ʀᴇᴍᴏᴠᴇᴅ ᴀɴʏ ᴍᴀᴅᴇ ᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʜᴀᴛ ᴘᴇᴏᴘʟᴇ ꜱᴇɴᴅ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.
   •➥ /cleanblue <on/off/yes/no>*:* ᴄʟᴇᴀɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴀғᴛᴇʀ ꜱᴇɴᴅɪɴɢ
@@ -354,7 +356,7 @@ cleaner_help: |
  """
 
 
-connections_help: |
+connections_help = 
 """
   •➥ *sᴏᴍᴇᴛɪᴍᴇs, ʏᴏᴜ ᴊᴜsᴛ ᴡᴀɴᴛ ᴛᴏ ᴀᴅᴅ sᴏᴍᴇ ɴᴏᴛᴇs ᴀɴᴅ ғɪʟᴛᴇʀs ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ, ʙᴜᴛ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴇᴠᴇʀʏᴏɴᴇ ᴛᴏ sᴇᴇ; ᴛʜɪs ɪs ᴡʜᴇʀᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs ᴄᴏᴍᴇ ɪɴ...
     ᴛʜɪs ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀᴛ's ᴅᴀᴛᴀʙᴀsᴇ, ᴀɴᴅ ᴀᴅᴅ ᴛʜɪɴɢs ᴛᴏ ɪᴛ ᴡɪᴛʜᴏᴜᴛ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀᴘᴘᴇᴀʀɪɴɢ ɪɴ ᴄʜᴀᴛ! ғᴏʀ ᴏʙᴠɪᴏᴜs ʀᴇᴀsᴏɴs, ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴀᴅᴅ ᴛʜɪɴɢs; ʙᴜᴛ ᴀɴʏ ᴍᴇᴍʙᴇʀ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄᴀɴ ᴠɪᴇᴡ ʏᴏᴜʀ ᴅᴀᴛᴀ.*
@@ -366,7 +368,7 @@ connections_help: |
   •➥ /allowconnect <yes/no>: ᴀʟʟᴏᴡ ᴀ ᴜꜱᴇʀ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀᴛ
 """
 
-cust_filters_help: |
+cust_filters_help = 
 """
   •➥ /filters*:* ʟɪꜱᴛ ᴀʟʟ ᴀᴄᴛɪᴠᴇ ғɪʟᴛᴇʀꜱ ꜱᴀᴠᴇᴅ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ
     *ᴀᴅᴍɪɴ ᴏɴʟʏ:*
@@ -388,7 +390,7 @@ cust_filters_help: |
 """
 
 
-disable_help: |
+disable_help = 
 """
   •➥ /cmds*:* ᴄʜᴇᴄᴋ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛᴜꜱ ᴏғ ᴅɪꜱᴀʙʟᴇᴅ ᴄᴏᴍᴍᴀɴᴅꜱ
    *ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:*
@@ -399,7 +401,7 @@ disable_help: |
   •➥ /listcmds*:* ʟɪꜱᴛ ᴀʟʟ ᴘᴏꜱꜱɪʙʟᴇ ᴛᴏɢɢʟᴇᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ
 """
 
-group_help: |
+group_help = 
 """
   *ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:*
   •➥ /setdesc*:* sᴇᴛs ɴᴇᴡ ᴄʜᴀᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ɪɴ ɢʀᴏᴜᴘ.
@@ -409,7 +411,7 @@ group_help: |
   •➥ /setgtitle*:* sᴇᴛs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
 """
 
-feds_help: |
+feds_help = 
 """
   Eᴠᴇʀʏᴛʜɪɴɢ ɪs ғᴜɴ, ᴜɴᴛɪʟ ᴀ sᴘᴀᴍᴍᴇʀ sᴛᴀʀᴛs ᴇɴᴛᴇʀɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ʙʟᴏᴄᴋ ɪᴛ. Tʜᴇɴ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ sᴛᴀʀᴛ ʙᴀɴɴɪɴɢ ᴍᴏʀᴇ, ᴀɴᴅ ᴍᴏʀᴇ, ᴀɴᴅ ɪᴛ ʜᴜʀᴛs.
   Bᴜᴛ ᴛʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴍᴀɴʏ ɢʀᴏᴜᴘs, ᴀɴᴅ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛʜɪs sᴘᴀᴍᴍᴇʀ ᴛᴏ ʙᴇ ɪɴ ᴏɴᴇ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘs - ʜᴏᴡ ᴄᴀɴ ʏᴏᴜ ᴅᴇᴀʟ? Dᴏ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴍᴀɴᴜᴀʟʟʏ ʙʟᴏᴄᴋ ɪᴛ, ɪɴ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘs?
@@ -420,7 +422,7 @@ feds_help: |
 """
 
 
-FED_OWNER_HELP: |
+FED_OWNER_HELP = 
 """
   *ғᴇᴅ ᴏᴡɴᴇʀ ᴏɴʟʏ:*
   •➥ `/newfed <ғᴇᴅ_ɴᴀᴍᴇ>`*:* Cʀᴇᴀᴛᴇs ᴀ Fᴇᴅᴇʀᴀᴛɪᴏɴ, Oɴᴇ ᴀʟʟᴏᴡᴇᴅ ᴘᴇʀ ᴜsᴇʀ
@@ -436,7 +438,7 @@ FED_OWNER_HELP: |
   •➥ `/fedsubs`*:* Sʜᴏᴡs ᴛʜᴇ ғᴇᴅs ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪs sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ `(ʙʀᴏᴋᴇɴ ʀɴ)`
 """
 
-FED_ADMIN_HELP: |
+FED_ADMIN_HELP = 
 """
   *Fᴇᴅ Aᴅᴍɪɴs:*
   •➥ /fban <ᴜsᴇʀ> <ʀᴇᴀsᴏɴ>*:* Fᴇᴅ ʙᴀɴs ᴀ ᴜsᴇʀ
@@ -451,7 +453,7 @@ FED_ADMIN_HELP: |
   •➥ /chatfed *:* Sᴇᴇ ᴛʜᴇ Fᴇᴅᴇʀᴀᴛɪᴏɴ ɪɴ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ
 """
 
-FED_USER_HELP: |
+FED_USER_HELP = 
 """
   •➥ᴇᴠᴇʀʏᴛʜɪɴɢ ɪs ғᴜɴ, ᴜɴᴛɪʟ ᴀ sᴘᴀᴍᴍᴇʀ sᴛᴀʀᴛs ᴇɴᴛᴇʀɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ʙʟᴏᴄᴋ ɪᴛ. ᴛʜᴇɴ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ sᴛᴀʀᴛ ʙᴀɴɴɪɴɢ ᴍᴏʀᴇ, ᴀɴᴅ ᴍᴏʀᴇ, ᴀɴᴅ ɪᴛ ʜᴜʀᴛs.
    ʙᴜᴛ ᴛʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴍᴀɴʏ ɢʀᴏᴜᴘs, ᴀɴᴅ ʏᴏᴜ ᴅᴏɴ'ᴛ  ᴡᴀɴᴛ ᴛʜɪs sᴘᴀᴍᴍᴇʀ ᴛᴏ ʙᴇ ɪɴ ᴏɴᴇ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘs - ʜᴏᴡ ᴄᴀɴ ʏᴏᴜ ᴅᴇᴀʟ? ᴅᴏ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴍᴀɴᴜᴀʟʟʏ ʙʟᴏᴄᴋ ɪᴛ, in ᴀʟʟ ʏᴏᴜʀ        ɢʀᴏᴜᴘs?\n
@@ -464,7 +466,7 @@ FED_USER_HELP: |
   •➥ /feduserhelp *:* ᴘʀᴏᴠɪᴅᴇs ʜᴇʟᴘ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs ᴀɴʏᴏɴᴇ ᴄᴀɴ ᴜsᴇ
 """
 
-md_help: |
+md_help = 
 """
   <b>Markdown Formatting</b>
     You can format your message using *bold*, _italics_, -underline-, and much more. Go ahead and experiment!
@@ -481,7 +483,7 @@ md_help: |
     <code>[button 2](buttonurl://example.com:same)</code>
     <code>[button 3](buttonurl://example.com)</code>
     This will show button 1 and 2 on the same line, with 3 underneath.
-filling_help: |
+filling_help: 
   <b>Fillings</b>
   You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the welcome message, or mention them in a filter!
   You can use these to mention a user in notes too!
@@ -495,14 +497,14 @@ filling_help: |
   - <code>{chatname}</code>: The chat's name.
 """
 
-gcast_help: |
+gcast_help = 
 """
   •➥ /broadcastall: ʙʀᴏᴀᴅᴄᴀsᴛs ᴇᴠᴇʀʏᴡʜᴇʀᴇ.
   •➥ /broadcastusers: ʙʀᴏᴀᴅᴄᴀsᴛs ᴛᴏᴏ ᴀʟʟ ᴜsᴇʀs.
   •➥ /broadcastgroups: ʙʀᴏᴀᴅᴄᴀsᴛs ᴛᴏᴏ ᴀʟʟ ɢʀᴏᴜᴘs.
 """
 
-gtranslate_help: |
+gtranslate_help = 
 """
   •➥ *ᴜsᴇ ᴛʜɪs ᴍᴏᴅᴜʟᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ sᴛᴜғғ!*
   •➥ /tl (or /tr): ᴀs ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ᴛʀᴀɴsʟᴀᴛᴇs ɪᴛ ᴛᴏ ᴇɴɢʟɪsʜ.
@@ -518,7 +520,7 @@ gtranslate_help: |
     https://te.legra.ph/ɪᴛs-ᴍᴇ-𒆜-Aʙɪsʜɴᴏɪ-07-30-2
 """
 
-fsub_help: |
+fsub_help = 
 """
   *ғᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ:*
   
@@ -535,7 +537,7 @@ fsub_help: |
   💡 ɪғ ʏᴏᴜ ᴅɪꜱᴀʙʟᴇ ғꜱᴜʙ, ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ꜱᴇᴛ ᴀɢᴀɪɴ ғᴏʀ ᴡᴏʀᴋɪɴɢ /fsub channel username
 """
 
-locks_help: |
+locks_help = 
 """
   •➥ /locktypes*:* ʟɪꜱᴛꜱ ᴀʟʟ ᴘᴏꜱꜱɪʙʟᴇ ʟᴏᴄᴋᴛʏᴘᴇꜱ
   *ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:*
@@ -551,7 +553,7 @@ locks_help: |
   •➥ ᴜɴʟᴏᴄᴋɪɴɢ ᴘᴇʀᴍɪssɪᴏɴ *ᴘɪɴ* ᴡɪʟʟ ᴀʟʟᴏᴡ ᴍᴇᴍʙᴇʀs (ɴᴏɴ-ᴀᴅᴍɪɴs) ᴛᴏ ᴘɪɴɴᴇᴅ ᴀ ᴍᴇssᴀɢᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ
 """
 
-log_help: |
+log_help = 
 """
   •➥ /logchannel*:* ɢᴇᴛ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ɪɴғᴏ.
   •➥ /setlog*:* sᴇᴛ ᴛʜᴇ log ᴄʜᴀɴɴᴇʟ.
@@ -563,7 +565,7 @@ log_help: |
   ➩ ғᴏʀᴡᴀʀᴅɪɴɢ ᴛʜᴇ /setlog ᴛᴏ ᴛʜᴇ ɢʀᴏᴜᴘ
 """
 
-misc_help: |
+misc_help = 
 """
   •➥ /id: get the current group id. If used by replying to a message, gets that user's id.
   •➥ /gifid: reply to a gif to me to tell you its file ID.
@@ -577,14 +579,14 @@ misc_help: |
   •➥ /getid : ɢᴇᴛ ɪᴅs ᴏғ ᴄʜᴀᴛ, ᴜsᴇʀ ᴀɴᴅ ᴄʜᴀᴛ ᴍᴇssᴀɢᴇ.
 """
 
-modules_help: |
+modules_help = 
 """
   •➥ /listmodules*:* ᴘʀɪɴᴛs ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴛʜᴇɪʀ ɴᴀᴍᴇs.
   •➥ /unload <ɴᴀᴍᴇ>*:* ᴜɴʟᴏᴀᴅs ᴍᴏᴅᴜʟᴇ ᴅʏɴᴀᴍɪᴄᴀʟʟʏ.
   •➥ /load <ɴᴀᴍᴇ>*:* ʟᴏᴀᴅs ᴍᴏᴅᴜʟᴇ
 """
 
-muting_help: |
+muting_help = 
 """
   •➥*ᴀᴅᴍɪɴꜱ ᴏɴʟʏ:*
   •➥ /mute <userhandle>*:* ꜱɪʟᴇɴᴄᴇꜱ ᴀ ᴜꜱᴇʀ. ᴄᴀɴ ᴀʟꜱᴏ ʙᴇ ᴜꜱᴇᴅ as a ʀᴇᴘʟʏ, ᴍᴜᴛɪɴɢ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴜꜱᴇʀ.
@@ -594,7 +596,7 @@ muting_help: |
   •➥ /unmute <userhandle>*:* ᴜɴᴍᴜᴛᴇꜱ ᴀ ᴜꜱᴇʀ. ᴄᴀɴ ᴀʟꜱᴏ ʙᴇ ᴜꜱᴇᴅ ᴀꜱ ᴀ ʀᴇᴘʟʏ, ᴍᴜᴛɪɴɢ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴜꜱᴇʀ.
 """
 
-notes_help: |
+notes_help = 
 """
   •➥ /get <ɴᴏᴛᴇɴᴀᴍᴇ>*:* ɢᴇᴛ ᴛʜᴇ ɴᴏᴛᴇ ᴡɪᴛʜ this ɴᴏᴛᴇɴᴀᴍᴇ
   •➥ #<notename>*:* same as /get
@@ -621,33 +623,33 @@ notes_help: |
    *ɴᴏᴛᴇ:* ɴᴏᴛᴇ ɴᴀᴍᴇꜱ ᴀʀᴇ ᴄᴀꜱᴇ--ꜱᴇɴꜱɪᴛɪᴠᴇ, ᴀɴᴅ ᴛʜᴇʏ ᴀʀᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴄᴏɴᴠᴇʀᴛᴇᴅ  ᴛᴏ ʟᴏᴡᴇʀᴄᴀꜱᴇ ʙᴇғᴏʀᴇ ɢᴇᴛᴛɪɴɢ ꜱᴀᴠᴇᴅ.
 """
 
-nmode_help: |
+nmode_help = 
 """
   *ɴɪɢʜᴛ ᴍᴏᴅᴇ ʜᴇʟᴘ ᴍᴇɴᴜ*
   """
 
 
-purge_help: |
+purge_help =
 """
   •➥ /purge *:* ʀᴇᴘʟʏ ᴡɪᴛʜ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴡʜᴇʀᴇ ᴀʟʟ ᴍᴇssᴀɢᴇs sʜᴏᴜʟᴅ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ
   •➥ /del *:* ᴅᴇʟᴇᴛᴇ ᴀ ʀᴇᴘʟʏᴇᴅ ᴍᴇssᴀɢᴇ 
 """
 
 
-pins_help: |
+pins_help = 
 """
   •➥ /pin*:* sɪʟᴇɴᴛʟʏ ᴘɪɴs ᴛʜᴇ ᴍᴇssᴀɢᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ - ᴀᴅᴅ 'loud' ᴏʀ 'notify' ᴛᴏ ɢɪᴠᴇ ɴᴏᴛɪғs ᴛᴏ ᴜsᴇʀs.
   •➥ /unpin*:* ᴜɴᴘɪɴs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.
   •➥ /pinned*:* ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.
 """
 
-quotly_help: |
+quotly_help = 
 """
   •➥ /q → ᴄʀᴇᴀᴛᴇ ᴀ ǫᴜᴏᴛᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇssᴀɢᴇ 
   •➥ /q r → ᴄʀᴇᴀᴛᴇ ᴀ ǫᴜᴏᴛᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ʀᴇᴘʟʏ
 """
 
-reports_help: |
+reports_help = 
 """
   •➥ /report <reason>*:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴀᴅᴍɪɴꜱ.
   •➥ @admin*:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴀᴅᴍɪɴs.
@@ -657,7 +659,7 @@ reports_help: |
   •➥ ɪғ ɪɴ ɢʀᴏᴜᴘ, ᴛᴏɢɢʟᴇꜱ ᴛʜᴀᴛ ɢʀᴏᴜᴘꜱ ꜱᴛᴀᴛᴜꜱ
 """
 
-rcmds_help: |
+rcmds_help = 
 """
   *ᴏɴʟʏ ғᴏʀ ᴅᴇᴠs*
   •➥ /rban ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ʙᴀɴ.
@@ -667,7 +669,7 @@ rcmds_help: |
   •➥/runmute ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ᴜɴ-ᴍᴜᴛᴇ
 """
 
-rules_help: |
+rules_help = 
 """
   •➥ /rules*:* ɢᴇᴛ the ʀᴜʟᴇꜱ for ᴛʜɪꜱ ᴄʜᴀᴛ
   •➥ /setrules <your rules here>*:* set the 𝚛𝚞𝚕𝚎𝚜 ғᴏʀ ᴛʜɪꜱ ᴄʜᴀᴛ.
@@ -675,7 +677,7 @@ rules_help: |
 """
 
 
-topics_help: |
+topics_help = 
 """
   ᴛᴇʟᴇɢʀᴀᴍ ɪɴᴛʀᴏᴜᴅᴜᴄᴇᴅ ɴᴇᴡ ᴡᴀʏ ᴏғ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ᴄʜᴀᴛ ᴄᴀʟʟᴇᴅ ғᴏʀᴜᴍs(ᴛᴏᴘɪᴄs)
   
@@ -688,14 +690,14 @@ topics_help: |
   •➥ /topicopen: ᴏᴘᴇɴ ᴀɴ ᴀʟʀᴇᴀᴅʏ ᴄʟᴏsᴇᴅ ᴛᴏᴘɪᴄ, ʀᴇǫᴜɪʀᴇs ᴛᴏᴘɪᴄ ɪᴅ ᴛᴏ ᴏᴘᴇɴ
 """
 
-tags_help: |
+tags_help = 
 """
   •➥ /tagall ᴏʀ @all (ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ ᴏʀ ᴀᴅᴅ ᴀɴᴏᴛʜᴇʀ ᴍᴇssᴀɢᴇ) ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴡɪᴛʜᴏᴜᴛ ᴇxᴄᴇᴘᴛɪᴏɴ
   •➥ /cancel : ғᴏʀ ᴄᴀɴᴄᴇʟɪɴɢ ᴛʜᴇ ᴍᴇɴᴛɪᴏɴ-ᴀʟʟ.
   •➥ /tagalert : ᴏɴ/ᴏғғ
 """
 
-userinfo_help: |
+userinfo_help =
 """
   •➥ /setbio <ᴛᴇxᴛ>: ᴡʜɪʟᴇ ʀᴇᴘʟʏɪɴɢ, ᴡɪʟʟ sᴀᴠᴇ ᴀɴᴏᴛʜᴇʀ ᴜsᴇᴅ's ʙɪᴏ
   •➥ /bio: ᴡɪʟʟ ɢᴇᴛ your ᴏʀ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ's ʙɪᴏ. ᴛʜɪs ᴄᴀɴɴᴏᴛ ʙᴇ sᴇᴛ ʙʏ ʏᴏᴜʀsᴇʟғ.
@@ -703,7 +705,7 @@ userinfo_help: |
   •➥ /me: ᴡɪʟʟ ɢᴇᴛ ʏᴏᴜʀ ᴏʀ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ ɪɴғᴏ
 """
 
-warns_help: |
+warns_help = 
 """
   •➥ /warns <ᴜsᴇʀʜᴀɴᴅʟᴇ>: ɢᴇᴛ ᴀ ᴜsᴇʀ's ɴᴜᴍʙᴇʀ, ᴀɴᴅ ʀᴇᴀsᴏɴ, ᴏғ ᴡᴀʀɴs.
   •➥ /warnliat : ʟɪsᴛ ᴏғ ᴀʟʟ ᴄᴜʀʀᴇɴᴛ ᴡᴀʀɴɪɴɢ ғɪʟᴛᴇʀs
@@ -716,7 +718,7 @@ warns_help: |
   •➥ /strongwarn  <ᴏɴ/ʏᴇs/ᴏғғ/ɴᴏ>: ɪғ sᴇᴛ ᴛᴏ ᴏɴ, ᴇxᴄᴇᴇᴅɪɴɢ ᴛʜᴇ ᴡᴀʀɴ ʟɪᴍɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ᴀ ʙᴀɴ. ᴇʟsᴇ, ᴡɪʟʟ ᴊᴜsᴛ ᴘᴜɴᴄʜ.
 """
 
-greetings_help: |
+greetings_help = 
 """
   •➥ /welcome <ᴏɴ/ᴏғғ>*:* ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs.
   •➥ /welcome *:* sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ sᴇᴛᴛɪɴɢs.
@@ -735,7 +737,7 @@ greetings_help: |
    •➥ /welcomehelp*:* ᴠɪᴇᴡ ᴍᴏʀᴇ ғᴏʀᴍᴀᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ғᴏʀ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ/ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs.
 """
 
-welcome_mutes: |
+welcome_mutes = 
 """
   ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴍᴜᴛᴇ ɴᴇᴡ ᴘᴇᴏᴘʟᴇ ᴡʜᴏ ᴊᴏɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ʜᴇɴᴄᴇ ᴘʀᴇᴠᴇɴᴛ sᴘᴀᴍʙᴏᴛs ғʀᴏᴍ ғʟᴏᴏᴅɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ. 
   
@@ -748,7 +750,7 @@ welcome_mutes: |
   
   *ɴᴏᴛᴇ:* sᴛʀᴏɴɢ ᴍᴏᴅᴇ ᴋɪᴄᴋs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ᴄʜᴀᴛ ɪғ ᴛʜᴇʏ ᴅᴏɴ'ᴛ ᴠᴇʀɪғʏ ɪɴ 120sᴇᴄᴏɴᴅs. ᴛʜᴇʏ ᴄᴀɴ ᴀʟᴡᴀʏs ʀᴇᴊᴏɪɴ ᴛʜᴏᴜɢʜ
 """
-welcome_help: |
+welcome_help = 
 """
   ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴡᴇʟᴄᴏᴍᴇ/ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs ᴄᴀɴ ʙᴇ ᴘᴇʀsᴏɴᴀʟɪsᴇᴅ ɪɴ ᴍᴜʟᴛɪᴘʟᴇ ᴡᴀʏs. ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇs ᴛᴏ ʙᴇ ɪɴᴅɪᴠɪᴅᴜᴀʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ, ʟɪᴋᴇ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ɪs, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ *ᴛʜᴇsᴇ* ᴠᴀʀɪᴀʙʟᴇs:
   
@@ -771,7 +773,7 @@ welcome_help: |
   ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴅᴇsɪʀᴇᴅ ᴍᴇᴅɪᴀ, ᴀɴᴅ ᴄᴀʟʟɪɴɢ /setwelcome
 """
 
-sticker_help: |
+sticker_help = 
 """
   •➥ /stickerid *:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ꜱᴛɪᴄᴋᴇʀ ᴛᴏ ᴍᴇ ᴛᴏ ᴛᴇʟʟ ʏᴏᴜ ɪᴛꜱ ғɪʟᴇ ɪᴅ.
   •➥ /getsticker *:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ꜱᴛɪᴄᴋᴇʀ ᴛᴏ ᴍᴇ ᴛᴏ ᴜᴘʟᴏᴀᴅ ɪᴛꜱ ʀᴀᴡ ᴘɴɢ ғɪʟᴇ.
@@ -782,7 +784,7 @@ sticker_help: |
 
 """
 
-sticker_blacklist_help: |
+sticker_blacklist_help = 
 """
   **ᴏɴʟʏ ᴀᴅᴍɪɴ:**
     •➥ /addblsticker <sᴛɪᴄᴋᴇʀ ʟɪɴᴋ>**:** Aᴅᴅ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴛʀɪɢɢᴇʀ ᴛᴏ ᴛʜᴇ ʙʟᴀᴄᴋ ʟɪsᴛ. Cᴀɴ ʙᴇ ᴀᴅᴅᴇᴅ ᴠɪᴀ ʀᴇᴘʟʏ sᴛɪᴄᴋᴇʀ
@@ -794,7 +796,7 @@ sticker_blacklist_help: |
     •➥ sᴛɪᴄᴋᴇʀ ʟɪɴᴋ ᴄᴀɴ ʙᴇ `https://t.me/addstickers/<sticker>` ᴏʀ ᴊᴜsᴛ `<sᴛɪᴄᴋᴇʀ>` ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴍᴇssᴀɢᴇ
 """
 
-raid_help: |
+raid_help = 
 """
   ᴇᴠᴇʀ ʜᴀᴅ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʀᴀɪᴅᴇᴅ ʙʏ sᴘᴀᴍᴍᴇʀs ᴏʀ ʙᴏᴛs?
   Tʜɪs ᴍᴏᴅᴜʟᴇ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ǫᴜɪᴄᴋʟʏ sᴛᴏᴘ ᴛʜᴇ ʀᴀɪᴅᴇʀs
@@ -810,23 +812,22 @@ raid_help: |
   •➥ /raidactiontime `(ᴛɪᴍᴇ ᴏᴘᴛɪᴏɴᴀʟ)` : ᴠɪᴇᴡ ᴏʀ sᴇᴛ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴅᴜʀᴀᴛɪᴏɴ ᴛʜᴀᴛ ᴛʜᴇ ʀᴀɪᴅ    ᴍᴏᴅᴇ ᴡɪʟʟ ᴛᴇᴍᴘʙᴀɴ ᴅᴇғᴀᴜʟᴛ ɪs 1 ʜᴏᴜʀ
 """
 
-zombies_help: |
+zombies_help = 
 """
   •➥ /zombies : ғɪɴᴅ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
   •➥ /zombies clean : ᴄʟᴇᴀɴ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ
 """
 
-webss_help: |
+webss_help = 
 """
   •➥ /webss *:* sᴇɴᴅs ᴛʜᴇ sᴄʀᴇᴇɴsʜᴏᴛ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴜʀʟ.
 """
 
-td_help: |
+td_help = 
 """
   •➥ /truth *:* sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ sᴛʀɪɴɢ.
   •➥ /dare *:* sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ sᴛʀɪɴɢ.
 """
-
 
 
 
