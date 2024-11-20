@@ -80,7 +80,7 @@ def management_panel_buttons(page_num):
         InlineKeyboardButton("Pins", callback_data="pins"), InlineKeyboardButton("Ping", callback_data="ping"),
         InlineKeyboardButton("Purge", callback_data="purge"), InlineKeyboardButton("Quotly", callback_data="quotly"),
         InlineKeyboardButton("Sticker", callback_data="sticker"), InlineKeyboardButton("Translator", callback_data="translator"),
-        InlineKeyboardButton("Truth-Dare", callback_data="truth_dare"), InlineKeyboardButton("Tag-All", callback_data="tag_all"),
+        InlineKeyboardButton("Truth-Dare", callback_data="TD_HELP"), InlineKeyboardButton("Tag-All", callback_data="tag_all"),
         InlineKeyboardButton("Uall", callback_data="uall"), InlineKeyboardButton("Warns", callback_data="warns"),
         InlineKeyboardButton("Welcome", callback_data="welcome"), InlineKeyboardButton("Zombies", callback_data="zombies")
     ]
