@@ -65,7 +65,7 @@ def management_panel_buttons(page_num):
     # Define the commands for all buttons in order
     buttons = [
         InlineKeyboardButton("A-spam", callback_data="ANTISPAM_HELP"), InlineKeyboardButton("A-raid", callback_data="a_raid"),
-        InlineKeyboardButton("A-flood", callback_data="antiflood_help"), InlineKeyboardButton("A-channel", callback_data="a_channel"),
+        InlineKeyboardButton("A-flood", callback_data="ANTIFLOOD_HELP"), InlineKeyboardButton("A-channel", callback_data="a_channel"),
         InlineKeyboardButton("Afk", callback_data="afk"), InlineKeyboardButton("Admin", callback_data="admin"),
         InlineKeyboardButton("Approval", callback_data="approval"), InlineKeyboardButton("B-list", callback_data="b_list"),
         InlineKeyboardButton("B-users", callback_data="b_users"), InlineKeyboardButton("Backup", callback_data="backup"),
