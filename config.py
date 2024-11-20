@@ -35,7 +35,7 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
-
+LOGGER_ID = int(getenv("LOGGER_ID", -1002122538649))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", -1002122538649))
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI" , "mongodb+srv://1:1@cluster0.nofyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
