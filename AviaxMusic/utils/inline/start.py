@@ -163,11 +163,15 @@ HELP_TEXTS = {
 }
 
 # Callback query handler for management actions
+# Callback query handler for management actions
 @app.on_callback_query(filters.regex(r"^f_sub|filters|feds|g_cast|info|logs|locks|muting|n_mode|notes|owner|pins|ping|purge|quotly|sticker|translator|truth_dare|tag_all|uall|warns|welcome|zombies|a_spam|a_raid|a_flood|a_channel|afk|admin|approval|b_list|b_users|backup|cinfo|clean|connect|disable|db_clean$"))
 async def handle_action(client: Client, callback_query: CallbackQuery):
     action = callback_query.data
+    # Convert action to uppercase and use underscores for spaces
+    help_text_key = f"{action.upper()}_HELP"
+    
     # Check if the action has a corresponding help text
-    help_text = HELP_TEXTS.get(f"{action.upper()}_HELP")
+    help_text = HELP_TEXTS.get(help_text_key)
     
     if help_text:
         await callback_query.message.edit_text(
@@ -182,8 +186,7 @@ async def handle_action(client: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("⬅️ Back", callback_data=f"management_page_1")]
             ])
-        )
-    
+    )
 
 
 # Callback query handler for close/back button
