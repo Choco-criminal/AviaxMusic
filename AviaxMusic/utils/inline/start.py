@@ -628,24 +628,24 @@ async def warns_help(client: Client, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("WELCOME_HELP"))
 async def welcome_help(client: Client, callback_query: CallbackQuery):
     welcome_message = """
-  ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴡᴇʟᴄᴏᴍᴇ/ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs ᴄᴀɴ ʙᴇ ᴘᴇʀsᴏɴᴀʟɪsᴇᴅ ɪɴ ᴍᴜʟᴛɪᴘʟᴇ ᴡᴀʏs.
- ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇs ᴛᴏ ʙᴇ ɪɴᴅɪᴠɪᴅᴜᴀʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ, ʟɪᴋᴇ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ɪs, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ *ᴛʜᴇsᴇ* ᴠᴀʀɪᴀʙʟᴇs:
-   × {first}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ғɪʀsᴛ* ɴᴀᴍᴇ     
-   × {last}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ʟᴀsᴛ* ɴᴀᴍᴇ. ᴅᴇғᴀᴜʟᴛs ᴛᴏ *ғɪʀsᴛ ɴᴀᴍᴇ* ɪғ ᴜsᴇʀ ʜᴀs ɴᴏ  ʟᴀsᴛ ɴᴀᴍᴇ.
-   × {fullname}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ғᴜʟʟ* ɴᴀᴍᴇ. ᴅᴇғᴀᴜʟᴛs ᴛᴏ *ғɪʀsᴛ ɴᴀᴍᴇ* ɪғ ᴜsᴇʀ ʜᴀs ɴᴏ ʟᴀsᴛ ɴᴀᴍᴇ.
-   × {username}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ᴜsᴇʀɴᴀᴍᴇ*. ᴅᴇғᴀᴜʟᴛs ᴛᴏ ᴀ *ᴍᴇɴᴛɪᴏɴ* ᴏғ ᴛʜᴇ ᴜsᴇʀ's ғɪʀsᴛ ɴᴀᴍᴇ ɪғ ʜᴀs ɴᴏ ᴜsᴇʀɴᴀᴍᴇ. 
-   × {mention}*:* ᴛʜɪs sɪᴍᴘʟʏ *ᴍᴇɴᴛɪᴏɴs* ᴀ ᴜsᴇʀ - ᴛᴀɢɢɪɴɢ ᴛʜᴇᴍ ᴡɪᴛʜ ᴛʜᴇɪʀ ғɪʀsᴛ ɴᴀᴍᴇ.
-   × {id}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ɪᴅ*
-   × {count}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ ᴜsᴇʀ's *ᴍᴇᴍʙᴇʀ ɴᴜᴍʙᴇʀ*.
-   × {chatname}*:* ᴛʜɪs ʀᴇᴘʀᴇsᴇɴᴛs ᴛʜᴇ *ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ ɴᴀᴍᴇ*.
-   ᴇᴀᴄʜ ᴠᴀʀɪᴀʙʟᴇ MUST ʙᴇ sᴜʀʀᴏᴜɴᴅᴇᴅ ʙʏ {} ᴛᴏ ʙᴇ ʀᴇᴘʟᴀᴄᴇᴅ.
-  ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs ᴀʟᴅᴏ sᴜᴘᴘᴏʀᴛ ᴍᴀʀᴋᴅᴏᴡɴ, sᴏ ʏᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ᴀɴʏ ᴇʟᴇᴍᴇɴᴛs ʙᴏʟᴅ/ɪᴛᴀʟɪᴄ/ᴄᴏᴅᴇ/ʟɪɴᴋs. 
-  ʙᴜᴛᴛᴏɴs ᴀʀᴇ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛᴇᴅ, sᴏ ʏᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴡᴇʟᴄᴏᴍᴇs ʟᴏᴏᴋ ᴀᴡᴇsᴏᴍᴇ ᴡɪᴛʜ sᴏᴍᴇ ɴɪᴄᴇ ɪɴᴛʀᴏ ʙᴜᴛᴛᴏɴs.
-  ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴀ ʙᴜᴛᴛᴏɴ ʟɪɴᴋɪɴɢ ᴛᴏ ʏᴏᴜʀ ʀᴜʟᴇs, ᴜsᴇ ᴛʜɪs: [ʀᴜʟᴇs](buttonurl://t.me/fubuki_cutibot?start=group_id)
-  sɪᴍᴘʟʏ ʀᴇᴘʟᴀᴄᴇ group_id ᴡɪᴛʜ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ɪᴅ, ᴡʜɪᴄʜ ᴄᴀɴ ʙᴇ ᴏʙᴛᴀɪɴᴇᴅ ᴠɪᴀ /id, ᴀɴᴅ ʏᴏᴜ'ʀᴇ ɢᴏᴏᴅ ᴛᴏ ɢᴏᴛ
-   *ɴᴏᴛᴇ* ᴛʜᴀᴛ ɢʀᴏᴜᴘ ɪᴅs ᴀʀᴇ ᴜsᴜᴀʟʟʏ ᴘʀᴇᴄᴇᴅᴇᴅ ʙʏ ᴀ - sɪɢɴ; ᴛʜɪs ɪs ʀᴇǫᴜɪʀᴇᴅ, sᴏ ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ʀᴇᴍᴏᴠᴇ ɪᴛ.
-  ʏᴏᴜ ᴄᴀɴ ᴇᴠᴇɴ sᴇᴛ ɪᴍᴀɢᴇs/ɢɪғs/ᴠɪᴅᴇᴏs/ᴠᴏɪᴄᴇ ᴍᴇssᴀɢᴇs ᴀs ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ʙʏ 
-  ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴅᴇsɪʀᴇᴅ ᴍᴇᴅɪᴀ, ᴀɴᴅ ᴄᴀʟʟɪɴɢ /setwelcome
+  Customize Your Group's Welcome/Goodbye Messages!
+You can personalize messages using these variables:
+
+{first}: User's first name
+{last}: User's last name (or first name if none)
+{fullname}: User's full name
+{username}: Username (or a mention if none)
+{mention}: Mentions the user by first name
+{id}: User's ID
+{count}: Member number
+{chatname}: Chat name
+Markdown & Buttons:
+
+Add bold, italics, links, and buttons. Example button for rules:
+[Rules](buttonurl://t.me/fubuki_cutibot?start=group_id)
+Replace group_id with your group’s ID (use /id to find it, including the - sign).
+
+You can also set media (images, GIFs, videos, voice) as welcome messages by replying to the media and using /setwelcome.
 """
     buttons = [
         [InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]
