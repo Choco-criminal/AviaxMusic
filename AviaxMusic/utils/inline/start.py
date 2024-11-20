@@ -58,7 +58,7 @@ def private_panel(_):
 # Management panel buttons for a given page
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from strings import get_string, helpers
+
 
 
 def management_panel_buttons(page_num):
@@ -363,6 +363,12 @@ async def filters(client: Client, callback_query: CallbackQuery):
 """
     buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_2")]]
     await callback_query.message.edit_text(filters_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+
+
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+
 
 # Callback query handler for Feds
 @app.on_callback_query(filters.regex("FEDS_HELP"))
