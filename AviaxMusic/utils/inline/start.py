@@ -58,14 +58,14 @@ def private_panel(_):
 # Management panel buttons for a given page
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-
+from strings import get_string, helpers
 
 
 def management_panel_buttons(page_num):
     # Define the commands for all buttons in order
     buttons = [
-        InlineKeyboardButton("A-spam", callback_data="a_spam"), InlineKeyboardButton("A-raid", callback_data="a_raid"),
-        InlineKeyboardButton("A-flood", callback_data="a_flood"), InlineKeyboardButton("A-channel", callback_data="a_channel"),
+        InlineKeyboardButton("A-spam", callback_data="antispam_help"), InlineKeyboardButton("A-raid", callback_data="a_raid"),
+        InlineKeyboardButton("A-flood", callback_data="antiflood_help"), InlineKeyboardButton("A-channel", callback_data="a_channel"),
         InlineKeyboardButton("Afk", callback_data="afk"), InlineKeyboardButton("Admin", callback_data="admin"),
         InlineKeyboardButton("Approval", callback_data="approval"), InlineKeyboardButton("B-list", callback_data="b_list"),
         InlineKeyboardButton("B-users", callback_data="b_users"), InlineKeyboardButton("Backup", callback_data="backup"),
