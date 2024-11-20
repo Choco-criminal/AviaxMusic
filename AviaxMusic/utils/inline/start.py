@@ -705,6 +705,91 @@ async def zombies_help(client: Client, callback_query: CallbackQuery):
     await callback_query.message.edit_text(zombies_message, reply_markup=InlineKeyboardMarkup(buttons))
 # Example usage: management_panel_buttons(1)
 
+from pyrogram import Client, filters
+from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
+
+# DEBUG_HELP callback
+@app.on_callback_query(filters.regex("DEBUG_HELP"))
+async def debug_help(client: Client, callback_query: CallbackQuery):
+    debug_message = """
+  *ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ*
+  •➥ /debug <on/off>*:* ʟᴏɢs ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜᴘᴅᴀᴛᴇs.ᴛxᴛ.
+  •➥ /logs: ʀᴜɴ ᴛʜɪs ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ʟᴏɢs ɪɴ ᴘᴍ.
+"""
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(debug_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+# EXTRAS_HELP callback
+@app.on_callback_query(filters.regex("EXTRAS_HELP"))
+async def extras_help(client: Client, callback_query: CallbackQuery):
+    extras_message = """
+  •➥ /id: get the current group id. If used by replying to a message, gets that user's id.
+  •➥ /gifid: reply to a gif to me to tell you its file ID.
+  •➥ /info: get information about a user.
+  •➥ /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
+  •➥ /ud <word>: Type the word or expression you want to search use.
+  •➥ /urban <word>: Same as /ud
+  •➥ /paste - Do a paste at `nekobin.com`
+  •➥ /cash : currency converter
+    example syntax: /cash 1 USD INR
+  •➥ /getid : ɢᴇᴛ ɪᴅs ᴏғ ᴄʜᴀᴛ, ᴜsᴇʀ ᴀɴᴅ ᴄʜᴀᴛ ᴍᴇssᴀɢᴇ.
+"""
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(extras_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+# REPORT_HELP callback
+@app.on_callback_query(filters.regex("REPORT_HELP"))
+async def report_help(client: Client, callback_query: CallbackQuery):
+    report_message = """
+  •➥ /report <reason>*:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴀᴅᴍɪɴꜱ.
+  •➥ @admin*:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴀᴅᴍɪɴs.
+   *ɴᴏᴛᴇ:* ɴᴇɪᴛʜᴇʀ ᴏғ ᴛʜᴇꜱᴇ ᴡɪʟʟ ɢᴇᴛ ᴛʀɪɢɢᴇʀᴇᴅ ɪғ ᴜsᴇs ʙʏ ᴀᴅᴍɪɴs.
+  •➥ /reports <on/off>*:* ᴄʜᴀɴɢᴇ ʀᴇᴘᴏʀᴛ sᴇᴛᴛɪɴɢ, ᴏʀ ᴠɪᴇᴡ ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛᴜꜱ.
+  •➥ ɪғ ᴅᴏɴᴇ ɪɴ ᴘᴍ, ᴛᴏɢɢʟᴇꜱ ʏᴏᴜʀ ꜱᴛᴀᴛᴜꜱ.
+  •➥ ɪғ ɪɴ ɢʀᴏᴜᴘ, ᴛᴏɢɢʟᴇꜱ ᴛʜᴀᴛ ɢʀᴏᴜᴘꜱ ꜱᴛᴀᴛᴜꜱ
+"""
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(report_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+# RCMDS_HELP callback
+@app.on_callback_query(filters.regex("RCMDS_HELP"))
+async def rcmds_help(client: Client, callback_query: CallbackQuery):
+    rcmds_message = """
+  *ᴏɴʟʏ ғᴏʀ ᴅᴇᴠs*
+  •➥ /rban ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ʙᴀɴ.
+  •➥ /runban ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ᴜɴ-ʙᴀɴ.
+  •➥ /rkick ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ᴋɪᴄᴋ.
+  •➥ /rmute ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ᴍᴜᴛᴇ.
+  •➥/runmute ᴜsᴇʀ ɢʀᴏᴜᴘ: ʀᴇᴍᴏᴛᴇ ᴜɴ-ᴍᴜᴛᴇ
+"""
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(rcmds_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+# DEVS_HELP callback
+@app.on_callback_query(filters.regex("DEVS_HELP"))
+async def devs_help(client: Client, callback_query: CallbackQuery):
+    devs_message = """
+  *ᴏɴʟʏ ғᴏʀ ᴅᴇᴠs*
+  •➥ /groups: ʟɪsᴛ ᴛʜᴇ ɢʀᴏᴜᴘs ᴡɪᴛʜ ɴᴀᴍᴇ, ID, ᴍᴇᴍʙᴇʀs ᴄᴏᴜɴᴛ ᴀs ᴀ ᴛxᴛ.
+  •➥ /leave <ID>: ʟᴇᴀᴠᴇ ᴛʜᴇ ɢʀᴏᴜᴘ, ID ᴍᴜsᴛ ʜᴀᴠᴇ ʜʏᴘʜᴇɴ(-)
+  •➥ /stats: sʜᴏᴡs ᴏᴠᴇʀᴀʟʟ ʙᴏᴛ sᴛᴀᴛs.
+  •➥ /ginfo ᴜsᴇʀɴᴀᴍᴇ/ʟɪɴᴋ/ɪᴅ: ᴘᴜʟʟs ɪɴғᴏ ᴘᴀɴᴇʟ ғᴏʀ ᴇɴᴛɪʀᴇ ɢʀᴏᴜᴘ.
+"""
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(devs_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+# RULES_HELP callback
+@app.on_callback_query(filters.regex("RULES_HELP"))
+async def rules_help(client: Client, callback_query: CallbackQuery):
+    rules_message = "Your rules message goes here."
+    buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="management_page_3")]]
+    await callback_query.message.edit_text(devs_message, reply_markup=InlineKeyboardMarkup(buttons))
+
+
+
+
+
+
 # Callback query handler for management panel
 @app.on_callback_query(filters.regex(r"management_page_\d+"))
 async def handle_management_panel(client: Client, callback_query: CallbackQuery):
