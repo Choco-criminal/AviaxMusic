@@ -64,8 +64,51 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 def management_panel_buttons(page_num):
     # Define the commands for all buttons in order
     buttons = [
-        InlineKeyboardButton("A-spam", callback_data="ANTISPAM_HELP"), InlineKeyboardButton("A-raid", callback_data="RAID_HELP"), InlineKeyboardButton("A-flood", callback_data="ANTIFLOOD_HELP"), InlineKeyboardButton("A-channel", callback_data="ACHANNEL_HELP"), InlineKeyboardButton("Afk", callback_data="AFK_HELP"), InlineKeyboardButton("Admin", callback_data="ADMIN_HELP"), InlineKeyboardButton("Approval", callback_data="APPROVE_HELP"), InlineKeyboardButton("B-list", callback_data="BLACKLIST_HELP"), InlineKeyboardButton("B-users", callback_data="BUSER_HELP"), InlineKeyboardButton("Backup", callback_data="BACKUP_HELP"), InlineKeyboardButton("Cinfo", callback_data="CINFO_HELP"), InlineKeyboardButton("Clean", callback_data="CLEANER_HELP"), InlineKeyboardButton("Connect", callback_data="CONNECTIONS_HELP"), InlineKeyboardButton("Disable", callback_data="DISABLE_HELP"), InlineKeyboardButton("Db-clean", callback_data="DBCLEAN_HELP"), InlineKeyboardButton("F-sub", callback_data="FSUB_HELP"), InlineKeyboardButton("Filters", callback_data="CUST_FILTERS_HELP"), InlineKeyboardButton("Feds", callback_data="FEDS_HELP"), InlineKeyboardButton("G-cast", callback_data="GCAST_HELP"), InlineKeyboardButton("Info", callback_data="USERINFO_HELP"), InlineKeyboardButton("Logs", callback_data="LOG_HELP"), InlineKeyboardButton("Locks", callback_data="LOCKS_HELP"), InlineKeyboardButton("Muting", callback_data="MUTING_HELP"), InlineKeyboardButton("N-mode", callback_data="NMODE_HELP"), InlineKeyboardButton("Notes", callback_data="NOTES_HELP"), InlineKeyboardButton("Owner", callback_data="OWNER_HELP"), InlineKeyboardButton("Pins", callback_data="PINS_HELP"), InlineKeyboardButton("Ping", callback_data="PING_HELP"), InlineKeyboardButton("Purge", callback_data="PURGE_HELP"), InlineKeyboardButton("Quotly", callback_data="QUOTLY_HELP"), InlineKeyboardButton("Sticker", callback_data="STICKER_HELP"), InlineKeyboardButton("Translator", callback_data="GTRANSLATE_HELP"), InlineKeyboardButton("Truth-Dare", callback_data="TD_HELP"), InlineKeyboardButton("Tag-All", callback_data="TAGS_HELP"), InlineKeyboardButton("Uall", callback_data="USERINFO_HELP"), InlineKeyboardButton("Warns", callback_data="WARNS_HELP"), InlineKeyboardButton("Welcome", callback_data="WELCOME_HELP"), InlineKeyboardButton("Zombies", callback_data="ZOMBIES_HELP")    ]
-    
+    InlineKeyboardButton("A-spam", callback_data="ANTISPAM_HELP"),
+    InlineKeyboardButton("A-raid", callback_data="RAID_HELP"),
+    InlineKeyboardButton("A-flood", callback_data="ANTIFLOOD_HELP"),
+    InlineKeyboardButton("A-channel", callback_data="ACHANNEL_HELP"),
+    InlineKeyboardButton("Afk", callback_data="AFK_HELP"),
+    InlineKeyboardButton("Admin", callback_data="ADMIN_HELP"),
+    InlineKeyboardButton("Approval", callback_data="APPROVE_HELP"),
+    InlineKeyboardButton("B-list", callback_data="BLACKLIST_HELP"),
+    InlineKeyboardButton("B-users", callback_data="BUSER_HELP"),
+    InlineKeyboardButton("Backup", callback_data="BACKUP_HELP"),
+    InlineKeyboardButton("Cinfo", callback_data="CINFO_HELP"),
+    InlineKeyboardButton("Clean", callback_data="CLEANER_HELP"),
+    InlineKeyboardButton("Connect", callback_data="CONNECTIONS_HELP"),
+    InlineKeyboardButton("Disable", callback_data="DISABLE_HELP"),
+    InlineKeyboardButton("Db-clean", callback_data="DBCLEAN_HELP"),
+    InlineKeyboardButton("F-sub", callback_data="FSUB_HELP"),
+    InlineKeyboardButton("Filters", callback_data="CUST_FILTERS_HELP"),
+    InlineKeyboardButton("Feds", callback_data="FEDS_HELP"),
+    InlineKeyboardButton("G-cast", callback_data="GCAST_HELP"),
+    InlineKeyboardButton("Info", callback_data="USERINFO_HELP"),
+    InlineKeyboardButton("Logs", callback_data="LOG_HELP"),
+    InlineKeyboardButton("Locks", callback_data="LOCKS_HELP"),
+    InlineKeyboardButton("Muting", callback_data="MUTING_HELP"),
+    InlineKeyboardButton("N-mode", callback_data="NMODE_HELP"),
+    InlineKeyboardButton("Notes", callback_data="NOTES_HELP"),
+    InlineKeyboardButton("Owner", callback_data="OWNER_HELP"),
+    InlineKeyboardButton("Pins", callback_data="PINS_HELP"),
+    InlineKeyboardButton("Ping", callback_data="PING_HELP"),
+    InlineKeyboardButton("Purge", callback_data="PURGE_HELP"),
+    InlineKeyboardButton("Quotly", callback_data="QUOTLY_HELP"),
+    InlineKeyboardButton("Sticker", callback_data="STICKER_HELP"),
+    InlineKeyboardButton("Translator", callback_data="GTRANSLATE_HELP"),
+    InlineKeyboardButton("Truth-Dare", callback_data="TD_HELP"),
+    InlineKeyboardButton("Tag-All", callback_data="TAGS_HELP"),
+    InlineKeyboardButton("Uall", callback_data="USERINFO_HELP"),
+    InlineKeyboardButton("Warns", callback_data="WARNS_HELP"),
+    InlineKeyboardButton("Welcome", callback_data="WELCOME_HELP"),
+    InlineKeyboardButton("Zombies", callback_data="ZOMBIES_HELP"),
+    InlineKeyboardButton("Debug", callback_data="DEBUG_HELP"),
+    InlineKeyboardButton("Devs", callback_data="DEVS_HELP"),
+    InlineKeyboardButton("Extras", callback_data="EXTRAS_HELP"),
+    InlineKeyboardButton("R-cmds", callback_data="RCMDS_HELP"),
+    InlineKeyboardButton("Report", callback_data="REPORT_HELP"),
+    InlineKeyboardButton("Rules", callback_data="RULES_HELP"),
+    ]
     # Number of buttons per page (3 buttons per row, 5 rows per page -> 15 buttons per page)
     buttons_per_page = 15
     total_pages = (len(buttons) + buttons_per_page - 1) // buttons_per_page  # Calculate total number of pages
